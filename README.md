@@ -1,319 +1,193 @@
-Task Flow 🚀
-A Full Stack Team Task Management Application
-Task Flow is a modern full stack project management and collaboration platform where teams can create projects, manage tasks, assign work, and track progress efficiently. The application is designed to improve productivity and simplify team collaboration using a clean and responsive user interface.
+# 📄 TaskFlow — Team Task Manager Project
 
-📌 Features
-🔐 Authentication System
+---
 
+## 👤 Candidate Information
 
-User Signup and Login
+**Name:** Siddhartha Singh
+**Email:** siddharthasingh1017@gmail.com
 
+---
 
-JWT-based Authentication
+## 📌 Project Overview
 
+**TaskFlow** is a full-stack collaborative task and project management web application designed to help teams efficiently manage projects, assign tasks, and track progress in a structured workflow environment.
 
-Protected Routes
+The system is inspired by tools such as Trello and Asana and implements role-based access control to support collaboration between administrators and team members.
 
+The application follows a **MERN-style architecture** with a React frontend and Node.js + Express backend, connected to MongoDB Atlas for persistent data storage.
 
-Secure API Access
+---
 
+## 🌐 Live Deployment
 
+* **Frontend URL:** [https://invigorating-integrity-production-956f.up.railway.app/](https://invigorating-integrity-production-956f.up.railway.app/)
+* **Backend API URL:** [https://team-task-manager-production-914d.up.railway.app](https://team-task-manager-production-914d.up.railway.app)
 
-📁 Project Management
+---
 
+## 🎯 Key Objectives of the Project
 
-Create New Projects
+* Build a scalable full-stack application using modern web technologies
+* Implement secure authentication using JWT
+* Design a role-based access control system
+* Enable real-time task and project tracking
+* Deploy a production-ready application on cloud infrastructure
 
+---
 
-View All Projects
+## ✨ Core Features
 
+### 🔐 Authentication System
 
-Manage Project Details
+* User registration and login system
+* Secure password hashing using bcrypt
+* JWT-based authentication
+* Session persistence using local storage
 
+---
 
-Organize Team Workflow
+### 📁 Project Management
 
+* Create and manage multiple projects
+* Assign roles (Admin / Member)
+* Admin-controlled team management (add/remove members)
+* Project-level collaboration support
 
+---
 
-✅ Task Management
+### ✅ Task Management System
 
+* workflow:
 
-Create Tasks
+  * To Do
+  * In Progress
+  * Completed
+* Task creation with:
 
+  * Title, description, priority, due date
+* Task assignment to team members
+* Overdue task identification
+* Role-based task permissions
 
-Update Task Status
+---
 
+### 📊 Dashboard Analytics
 
-Track Progress
+* Total task overview
+* Task status distribution
+* Team workload analysis
+* Overdue task tracking
 
+---
 
-Task Categorization
+## 🔐 Role-Based Access Control
 
+| Feature             | Admin | Member             |
+| ------------------- | ----- | ------------------ |
+| Create tasks        | ✔     | ✖                  |
+| Delete tasks        | ✔     | ✖                  |
+| Edit tasks          | ✔     | ✖                  |
+| Update task status  | ✔     | ✔ (own tasks only) |
+| Manage team members | ✔     | ✖                  |
+| View dashboard      | ✔     | ✔                  |
 
-Manage Deadlines and Workflow
+---
 
+## 🛠 Technology Stack
 
+### Frontend
 
-📊 Dashboard
+* React.js (Vite)
+* React Router
+* Axios
+* Context API
+* CSS (custom styling with variables)
 
+### Backend
 
-User Dashboard
+* Node.js
+* Express.js
+* MongoDB (Atlas)
+* Mongoose
+* JWT Authentication
+* bcrypt.js
+* CORS middleware
 
+---
 
-Project Overview
+## 🏗 System Architecture
 
+The system follows a **client-server architecture**:
 
-Task Statistics
+* **Frontend Layer:** Handles UI, routing, and API calls
+* **Backend Layer:** REST API handling authentication, business logic
+* **Database Layer:** MongoDB Atlas for persistent storage
 
+Communication between frontend and backend is handled via RESTful APIs secured using JWT authentication.
 
-Real-Time Project Tracking
+---
 
+## ⚙️ Functional Modules
 
+### 1. Authentication Module
 
-🎨 Frontend Features
+Handles user signup, login, and token validation.
 
+### 2. Project Module
 
-Responsive UI Design
+Responsible for project creation, member management, and access control.
 
+### 3. Task Module
 
-Modern React Components
+Handles creation, assignment, updating, and deletion of tasks.
 
+### 4. Dashboard Module
 
-Context API State Management
+Aggregates system data for analytics and insights.
 
+---
 
-Clean User Experience
+## 🚀 Deployment Details
 
+* Frontend deployed on cloud hosting platform
+* Backend deployed as REST API service
+* Database hosted on MongoDB Atlas (cloud database)
+* Environment variables used for secure configuration
 
-Reusable Components
+---
 
+## 📌 Key Technical Highlights
 
+* Fully functional REST API architecture
+* Secure authentication using JWT
+* Role-based authorization system
+* Modular and scalable backend structure
+* Responsive and dynamic frontend UI
+* Cloud-based deployment (production ready)
 
-🛠️ Tech Stack
-Frontend
+---
 
+## 🧪 How to Run 
 
-React.js
+### Backend
 
-
-Vite
-
-
-Axios
-
-
-CSS
-
-
-
-Backend
-
-
-Node.js
-
-
-Express.js
-
-
-JWT Authentication
-
-
-REST API
-
-
-
-Database
-
-
-MongoDB Atlas
-
-
-Mongoose
-
-
-
-Deployment
-
-
-GitHub
-
-
-Railway
-
-
-
-📂 Project Structure
-TaskFlow/│├── frontend/│   ├── src/│   │   ├── api/│   │   ├── assets/│   │   ├── components/│   │   ├── context/│   │   ├── pages/│   │   ├── styles/│   │   ├── App.jsx│   │   └── main.jsx│   ││   ├── .env│   ├── package.json│   └── vite.config.js│├── server/│   ├── middleware/│   ├── routes/│   ├── .env│   ├── index.js│   ├── initDB.js│   └── package.json│└── README.md
-
-⚙️ Installation Guide
-1️⃣ Clone Repository
-git clone https://github.com/yourusername/task-flow.git
-
-2️⃣ Navigate Into Project
-cd task-flow
-
-🔧 Backend Setup
-Go to Server Folder
+```bash
 cd server
-
-Install Dependencies
 npm install
+npx nodemon index.js
+```
 
-Create .env File
-PORT=5000MONGO_URI=your_mongodb_connection_stringJWT_SECRET=your_secret_keyCLIENT_URL=http://localhost:5173
+### Frontend
 
-Start Backend Server
-npm start
-OR
-node index.js
-
-🎨 Frontend Setup
-Open New Terminal
+```bash
 cd frontend
-
-Install Dependencies
 npm install
-
-Create .env File
-VITE_API_URL=http://localhost:5000
-
-Run Frontend
 npm run dev
+```
 
-🌐 Deployment
-Backend Deployment
+---
 
+## 📎 Conclusion
 
-Railway
-
-
-Frontend Deployment
-
-
-Railway / Vercel
-
-
-
-🔑 Environment Variables
-Backend .env
-PORT=5000MONGO_URI=your_mongodb_uriJWT_SECRET=your_secret_keyCLIENT_URL=your_frontend_url
-
-Frontend .env
-VITE_API_URL=your_backend_url
-
-📡 API Routes
-Authentication Routes
-MethodRouteDescriptionPOST/api/auth/signupRegister UserPOST/api/auth/loginLogin User
-
-Project Routes
-MethodRouteDescriptionGET/api/projectsGet ProjectsPOST/api/projectsCreate Project
-
-Task Routes
-MethodRouteDescriptionGET/api/tasksGet TasksPOST/api/tasksCreate Task
-
-🔒 Security Features
-
-
-JWT Authentication
-
-
-Protected Backend Routes
-
-
-Environment Variables
-
-
-MongoDB Secure Connection
-
-
-CORS Configuration
-
-
-
-🎯 Future Improvements
-
-
-Role-Based Access Control
-
-
-Real-Time Chat
-
-
-Notifications System
-
-
-Drag and Drop Tasks
-
-
-Team Invitations
-
-
-File Upload Support
-
-
-Dark Mode
-
-
-Activity Logs
-
-
-
-📸 Screenshots
-Add your project screenshots here.
-Example:
-![Dashboard](screenshot.png)
-
-🧠 Learning Outcomes
-Through this project, I learned:
-
-
-Full Stack Development
-
-
-REST API Creation
-
-
-Authentication System
-
-
-MongoDB Integration
-
-
-Frontend-Backend Communication
-
-
-Deployment on Railway
-
-
-Environment Variables Management
-
-
-Git and GitHub Workflow
-
-
-
-👨‍💻 Author
-Siddhartha Singh
-
-📄 License
-This project is developed for learning and portfolio purposes.
-
-⭐ Support
-If you like this project:
-
-
-Star the repository
-
-
-Fork the project
-
-
-Share feedback
-
-
-
-🚀 Live Demo
-Frontend:
-Add frontend deployed URL here
-Backend:
-Add backend deployed URL here
+TaskFlow demonstrates a complete full-stack application covering authentication, authorization, database design, API development, and deployment. The project showcases practical implementation of real-world team collaboration features and scalable backend architecture.
