@@ -1,0 +1,67 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.app-main {
+  margin-left: 220px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.app-content {
+  flex: 1;
+  padding: 2rem 2.5rem;
+}
+
+/* ── Loading screen ── */
+.app-loader {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Mobile topbar (hidden on desktop) ── */
+.app-topbar {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-2);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.topbar-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--accent);
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.topbar-menu {
+  background: none;
+  color: var(--text);
+  font-size: 1.2rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99;
+}
+
+@media (max-width: 900px) {
+  .app-main { margin-left: 0; }
+  .app-topbar { display: flex; }
+  .app-content { padding: 1.25rem; }
+}
